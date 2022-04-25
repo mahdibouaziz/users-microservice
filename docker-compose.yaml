@@ -8,6 +8,8 @@ services:
       - .:/app
     depends_on:
       - users_db
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
 
   users_db:
     image: mysql:8
